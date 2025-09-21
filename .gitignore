@@ -1,0 +1,6 @@
+.env 
+*.log 
+__pucache__/ 
+.vscode/ 
+*.key 
+*.key 

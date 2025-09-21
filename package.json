@@ -1,0 +1,116 @@
+{
+  "name": "stm32-Helper",
+  "displayName": "STM32-Helper",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "first-vscode-extension.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "stm32-helper.compile",
+        "title": "STM32: Compile Project",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "stm32-helper.flash",
+        "title": "STM32: Flash to Device",
+        "icon": "$(arrow-down)"
+      },
+      {
+        "command": "stm32-helper.compileAndFlash",
+        "title": "STM32: Compile & Flash",
+        "icon": "$(play)"
+      }
+      
+     
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "stm32-helper.compile",
+          "when": "resourceExtname == .c || resourceExtname == .h",
+          "group": "navigation"
+        },
+        {
+          "command": "stm32-helper.flash",
+          "when": "resourceExtname == .c || resourceExtname == .h",
+          "group": "navigation"
+        },
+        {
+          "command": "stm32-helper.compileAndFlash",
+          "when": "resourceExtname == .c || resourceExtname == .h",
+          "group": "navigation"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "stm32-explorer",
+          "title": "STM32 Development",
+          "icon": "./resource/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "stm32-explorer": [
+        {
+          "id": "stm32-projects",
+          "name": "STM32 Projects",
+          "icon": "$(notebook)"
+          
+        }
+      ]
+    },
+    "configuration": {
+      "title": "STM32 Helper",
+      "properties": {
+        
+        "stm32Helper.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show/hide STM32 status bar items"
+        },
+        "stm32Helper.defaultProject": {
+          "type": "string",
+          "description": "Path to default Keil project file"
+        },
+        "stm32Helper.Make": {
+          "type": "string",
+          "default": "C:\\stm32f103c8t6\\rtos",
+          "description":  "Ruta del Make Padre..."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
