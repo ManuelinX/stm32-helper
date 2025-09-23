@@ -3,6 +3,7 @@ Proyecto parea facilitar el compilado y grabado de programa para la stm32 blue p
 -   Para poder instalar esta extension primero necesitas tener el compilador arm-none-eabi-gcc instalado
     y tenerlo agregado al path.
 -   Necesitas tener instalado Git bash agregarlo al path para poder llamarlo desde la cmd de windows.
+-   Necesitas tener instalado el Make y agregarlo al path, para poder llamarlo desde la cmd de windows.
 -   Se necesita instalar vs code.
 
 -   En la carpeta resources se tienen todos los archivos necesarios. Carpetas y sus rutas de instalacion:
