@@ -9,7 +9,7 @@ Proyecto parea facilitar el compilado y grabado de programa para la stm32 blue p
 
     -   Mover a "C:\" las siguientes carpetas:
 
-        - stlink-1.8.0-win32 (se recomienda agregar al path la siguiente ruta "C:\stlink-1.8.0-win32\bin" )
+        - stlink-1.8.0-win32
         - stm32f103c8t6
     
     -   Mover a "C:\Program Files (x86)\" las siguientes carpetas:
