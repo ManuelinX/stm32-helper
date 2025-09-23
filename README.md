@@ -22,4 +22,4 @@ Para la instalacion de un .vsix necesitaras algunas dependencias, se recomienda 
 
 -   Para la instalacion de la extension, se habre un cmd y se hace un "cd" a la ruta donde lo tengas        descargado, posteriormente se ejecuta el siguiente comando:
 
-                "code --install-extension stm32-Helper-0.0.1.vsix"
+                code --install-extension stm32-Helper-1.2.0.vsix
